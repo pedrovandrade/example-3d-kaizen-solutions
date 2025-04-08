@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoader } from "@react-three/fiber";
 import * as THREE from "three";
+import { useHref } from "react-router";
 
 /**
  * FloorMesh component.
@@ -8,7 +9,7 @@ import * as THREE from "three";
  * The texture is loaded asynchronously using the useLoader hook.
  */
 export default function FloorMesh() {
-  const baseUrl: string = process.env.PUBLIC_URL || '';
+  const baseUrl: string = useHref('/');
 
   // Load a texture for the floor
   const floorTexture = useLoader(THREE.TextureLoader, `${baseUrl}/3D/textures/floor_tile.jpg`);

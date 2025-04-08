@@ -6,6 +6,7 @@ import * as THREE from "three";
 import RotatingModel from "./RotatingModel";
 import CustomDirectionalLight from "./CustomDirectionalLight";
 import FloorMesh from "./FloorMesh";
+import { useHref } from "react-router";
 
 /**
  * ThreeDModelPage component.
@@ -17,7 +18,7 @@ import FloorMesh from "./FloorMesh";
  * - OrbitControls with auto-rotation when the user is not interacting.
  */
 export default function ThreeDModelPage() {
-  const baseUrl: string = process.env.PUBLIC_URL || '';
+  const baseUrl: string = useHref('/');
   const textRef = useRef<THREE.Mesh>(null);
 
   /**
