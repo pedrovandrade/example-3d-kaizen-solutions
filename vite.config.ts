@@ -4,5 +4,6 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
+  base: '/example-3d-kaizen-solutions/',
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
 });
