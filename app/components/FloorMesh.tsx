@@ -8,8 +8,10 @@ import * as THREE from "three";
  * The texture is loaded asynchronously using the useLoader hook.
  */
 export default function FloorMesh() {
+  const baseUrl: string = process.env.PUBLIC_URL || '';
+
   // Load a texture for the floor
-  const floorTexture = useLoader(THREE.TextureLoader, "/3D/textures/floor_tile.jpg");
+  const floorTexture = useLoader(THREE.TextureLoader, `${baseUrl}/3D/textures/floor_tile.jpg`);
   floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping; // Enable texture tiling
   floorTexture.repeat.set(5, 5); // Set the number of tiles
 

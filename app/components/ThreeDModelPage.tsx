@@ -17,6 +17,7 @@ import FloorMesh from "./FloorMesh";
  * - OrbitControls with auto-rotation when the user is not interacting.
  */
 export default function ThreeDModelPage() {
+  const baseUrl: string = process.env.PUBLIC_URL || '';
   const textRef = useRef<THREE.Mesh>(null);
 
   /**
@@ -38,13 +39,13 @@ export default function ThreeDModelPage() {
           }
         >
           <Environment
-            files="/3D/background/autumn_field_puresky_2k.hdr" // Path to your HDR file
+            files={`${baseUrl}/3D/background/autumn_field_puresky_2k.hdr`} // Path to your HDR file
             background // Use the HDR as the scene background
           />
           {/* Floor Mesh */}
           <FloorMesh />
           {/* Rotating GLB Model */}
-          <RotatingModel modelPath="/3D/models/kaizen-logo.glb" />
+          <RotatingModel modelPath={`${baseUrl}/3D/models/kaizen-logo.glb`} />
           <Text3D
             ref={textRef}
             font={Roboto as unknown as FontData}

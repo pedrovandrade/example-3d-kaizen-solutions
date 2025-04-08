@@ -2,6 +2,7 @@
   "name": "example-3d-kaizen-solutions",
   "private": true,
   "type": "module",
+  "homepage": "/example-3d-kaizen-solutions",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
