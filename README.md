@@ -5,7 +5,7 @@ Stack :
 - React (built with React Router framework)
 - Three.JS with React Three Fiber and React Three Drei
 
-[![See demo page](https://pedrovandrade.github.io/example-3d-kaizen-solutions/)
+[See demo page](https://pedrovandrade.github.io/example-3d-kaizen-solutions/)
 
 ## Getting Started
 
